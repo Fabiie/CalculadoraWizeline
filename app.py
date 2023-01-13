@@ -28,7 +28,7 @@ def main():
 
 
 def menu():
-    respuesta = input(""" Calculadora
+    respuesta = input("""Bienvenido a Calculadora
     Seleccione una de las siguientes opciones:
     1.- Sumar
     2.- Restar
@@ -42,6 +42,30 @@ def menu():
     0.- Salir  
     """ )
     return respuesta
+
+def suma():
+    a = input('Ingresa el primer valor: \n ')
+    b = input('Ingresa el segundo valor: \n')
+    print( 'El resultado es:')
+    print(int(a) + int(b) )
+
+def resta():
+    a = input('Ingresa el primer valor: \n ')
+    b = input('Ingresa el segundo valor: \n')
+    print( 'El resultado es:')
+    print(int(a) - int(b) )
+
+def multi():
+    a = input('Ingresa el primer valor: \n ')
+    b = input('Ingresa el segundo valor: \n')
+    print( 'El resultado es:')
+    print(int(a) * int(b) )
+
+def division():
+    a = input('Ingresa el primer valor: \n ')
+    b = input('Ingresa el segundo valor: \n')
+    print( 'El resultado es:')
+    print(int(a) / int(b) )
 
 if __name__ == '__main__':
         main()
