@@ -1,4 +1,3 @@
-import math
 import numpy
 
 def main():
@@ -6,7 +5,12 @@ def main():
     opcion = menu()
 
     while opcion != "0":
-        print("Bienvenido a la operación %s" %opciones[int(opcion)])
+        try:
+            print("Bienvenido a la operación %s" %opciones[int(opcion)])
+        except ValueError:
+            print('Ingresa una opción válida')
+        except IndexError:
+             print('Ingresa una opción válida')
         if opcion == "1":
             suma()
         if opcion == "2":
@@ -26,6 +30,7 @@ def main():
         if opcion == "9":
             tan()
         opcion = menu()
+    
 
     print("Saliendo...")
 
