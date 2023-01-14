@@ -1,3 +1,6 @@
+import math
+import numpy
+
 def main():
     opciones = ["Salir", "SUMA", "RESTA", "MULTIPLICACION", "DIVISION", "RAIZ", "EXPONENTE", "SENO", "COSENO", "TANGENTE"]
     opcion = menu()
@@ -34,7 +37,7 @@ def menu():
     2.- Restar
     3.- Multiplicar
     4.- Dividir
-    5.- Raiz n
+    5.- Raiz 
     6.- Exponente n
     7.- Seno
     8.- Coseno
@@ -66,6 +69,33 @@ def division():
     b = input('Ingresa el segundo valor: \n')
     print( 'El resultado es:')
     print(int(a) / int(b) )
+
+def raiz():
+    a = input('Ingresa el valor del número: \n ')
+    resultado = numpy.sqrt(int(a))
+    print( 'El resultado es: %s' %resultado)
+
+def exp():
+    a = input('Ingresa el valor del número: \n ')
+    b = input('Ingresa el valor del exponente: \n')
+    res = int(a) ** int(b)
+    print( 'El resultado es: %s' %res)
+
+def sen():
+    a = input('Ingresa el valor del cual quieres conocer el seno: \n ')
+    print( 'El resultado es:')
+    print(numpy.sin(int(a)) )
+
+def cos():
+    a = input('Ingresa el valor del cual quieres conocer el coseno: \n ')
+    print( 'El resultado es:')
+    print(numpy.cos(int(a)) )
+
+def tan():
+    a = input('Ingresa el valor del cual quieres conocer la tangente: \n ')
+    print( 'El resultado es:')
+    print(numpy.tan(int(a)) )
+    
 
 if __name__ == '__main__':
         main()
